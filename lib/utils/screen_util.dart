@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+
+// default height of screens
+final double kScreenHeight = 575;
+// default width of screen
+final double kScreenWidth = 360;
 class ScreenUtil {
   final BuildContext context;
 
