@@ -5,6 +5,7 @@ import 'package:jellybean/ui/views/settings/device/sound.dart';
 import 'package:jellybean/ui/views/settings/settings_screen.dart';
 import 'package:jellybean/ui/views/settings/system/about_phone.dart';
 import 'package:jellybean/ui/views/settings/system/date_time.dart';
+import 'package:jellybean/ui/views/settings/system/developer_options.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AboutPhoneScreen(),
+      home: DeveloperOptionsScreen(),
     );
   }
 }
