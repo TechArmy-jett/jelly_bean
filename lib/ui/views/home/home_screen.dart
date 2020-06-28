@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                YBox(180),
+                YBox(80),
 
                 // quick actions pannel
                 Padding(
@@ -53,92 +53,124 @@ class HomeScreen extends StatelessWidget {
                 // home screen apps
 
                 // camera
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.camera,
+                InkWell(
+                  onTap: (){
+                        
+                      },
+                                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  AppImages.camera,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Text(
-                          'Camera',
-                          style: AppStyles.appNameTextStyle,
-                        ),
-                      ],
-                    ),
 
-                    // music
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.music,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Music',
-                          style: AppStyles.appNameTextStyle,
-                        ),
-                      ],
-                    ),
+YBox(8),
 
-                    // gallery
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.gallery,
-                              ),
-                            ),
+                          Text(
+                            'Camera',
+                            style: AppStyles.appNameTextStyle,
                           ),
-                        ),
-                        Text(
-                          'Gallery',
-                          style: AppStyles.appNameTextStyle,
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
 
-                    // settings
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.settings,
+                      // music
+                      InkWell(
+                        onTap: (){
+                          
+                        },
+                                            child: Column(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    AppImages.music,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
+
+YBox(8),
+
+                            Text(
+                              'Music',
+                              style: AppStyles.appNameTextStyle,
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Settings',
-                          style: AppStyles.appNameTextStyle,
+                      ),
+
+                      // gallery
+                      InkWell(
+                        onTap: (){
+                          
+                        },
+                                            child: Column(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    AppImages.gallery,
+                                  ),
+                                ),
+                              ),
+                            ),
+
+YBox(8),
+
+                            Text(
+                              'Gallery',
+                              style: AppStyles.appNameTextStyle,
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+
+                      // settings
+                      InkWell(
+                        onTap: (){
+                          
+                        },
+                                            child: Column(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    AppImages.settings,
+                                  ),
+                                ),
+                              ),
+                            ),
+
+YBox(8),
+
+                            Text(
+                              'Settings',
+                              style: AppStyles.appNameTextStyle,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
 
                 YBox(40),
@@ -158,112 +190,120 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     // phone
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.phone,
-                              ),
+                    InkWell(
+                      onTap: (){
+                        
+                      },
+                                          child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                              AppImages.phone,
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
 
                     // contact
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.contact,
-                              ),
+                    InkWell(
+                      onTap: (){
+                        
+                      },
+                                          child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                              AppImages.contact,
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
 
                     // menu item
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            width: 2,
-                            color: Colors.white,
-                          )),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                          YBox(8),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 6,
-                                width: 6,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ],
+                    InkWell(
+                      onTap: (){
+                        print('menu item');
+                      },
+                                          child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              width: 2,
+                              color: Colors.white,
+                            )),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                            YBox(8),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  height: 6,
+                                  width: 6,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
                     // browser
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                AppImages.browser,
-                              ),
+                    InkWell(
+                      onTap: (){
+
+                      },
+                                          child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                              AppImages.browser,
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ],
                 ),
