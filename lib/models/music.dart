@@ -1,4 +1,4 @@
-// list of available music on the device
+// music on the device
 class Music {
   // name of artiste
   final String artisteName;
