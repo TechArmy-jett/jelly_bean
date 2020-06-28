@@ -26,5 +26,6 @@ class AppImages {
   static String music = 'assets/images/app_icons/music.png';
   static String phone = 'assets/images/app_icons/phone.png';
   static String search = 'assets/images/app_icons/search.png';
+  static String menu = 'assets/images/app_icons/menu.png';
 
 }
