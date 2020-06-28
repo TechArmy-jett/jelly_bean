@@ -29,13 +29,23 @@ class Message {
   // dummy data to show for list of messages sent
   static List<Message> messageList = [
 
+     // hard coded for now
     Message(
-      recipientName: '',
-      recipientNumber: '',
-      messageBody: '',
+      recipientName: Contact.contactList[0].name,
+      recipientNumber: Contact.contactList[0].phone.phoneNumber,
+      messageBody: 'This is the message body',
       messageTime: '1:48AM',
       hasAvatar: true,
       isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: '',
+      recipientNumber: '020 0000 1110',
+      messageBody: 'Message body goes here',
+      messageTime: '3:48AM',
+      hasAvatar: false,
+      isContactPresent: false,
     ),
 
   ];
