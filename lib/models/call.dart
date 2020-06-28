@@ -6,44 +6,53 @@ class Call {
   final String phoneNumber;
   // if contact exists on the device or not
   final bool isContactPresent;
-  // status of the call ( can be either missed or received or outgoing)
+  // status of the call (can be either missed or received or outgoing)
   final String callStatus;
+  // call time entry
+  final String callTime;
 
   // constructor
   Call(
       {this.contactName,
       this.phoneNumber,
       this.isContactPresent,
-      this.callStatus});
+      this.callStatus,
+      this.callTime,
+      });
 
   // call history dummy data
   static List<Call> callList = [
+
     Call(
-      contactName: 'Josteve Adekanbi',
-      phoneNumber: '080 0000 0000',
-      isContactPresent: true,
-      callStatus: 'outgoing'
+        contactName: 'Timilehin Jegede',
+        phoneNumber: '080 0101 0101',
+        isContactPresent: true,
+        callStatus: 'received',
+        callTime: '2 mins ago'
     ),
 
     Call(
         contactName: '',
         phoneNumber: '080 1111 1111',
         isContactPresent: false,
-        callStatus: 'missed'
+        callStatus: 'missed',
+        callTime: '1 hour ago'
     ),
 
     Call(
-        contactName: 'Timilehin Jegede',
-        phoneNumber: '080 0101 0101',
+        contactName: 'Josteve Adekanbi',
+        phoneNumber: '080 0000 0000',
         isContactPresent: true,
-        callStatus: 'received'
+        callStatus: 'outgoing',
+        callTime: '2 days ago'
     ),
 
     Call(
         contactName: 'Adebayo Emmanuel',
         phoneNumber: '080 1100 0011',
         isContactPresent: true,
-        callStatus: 'missed'
+        callStatus: 'missed',
+        callTime: '25th June, 2020'
     ),
     // add others here
   ];
