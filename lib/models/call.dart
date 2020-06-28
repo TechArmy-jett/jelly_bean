@@ -8,8 +8,10 @@ class Call {
   final bool isContactPresent;
   // status of the call (can be either missed or received or outgoing)
   final String callStatus;
-  // call time entry
+  // time call was made
   final String callTime;
+  // duration of the call (should be "00:00" if [callStatus] == "missed"
+  final String callDuration;
 
   // constructor
   Call(
@@ -18,6 +20,7 @@ class Call {
       this.isContactPresent,
       this.callStatus,
       this.callTime,
+        this.callDuration,
       });
 
   // call history dummy data
@@ -28,7 +31,8 @@ class Call {
         phoneNumber: '080 0101 0101',
         isContactPresent: true,
         callStatus: 'received',
-        callTime: '2 mins ago'
+        callTime: '2 mins ago',
+      callDuration: '34:02'
     ),
 
     Call(
@@ -36,7 +40,8 @@ class Call {
         phoneNumber: '080 1111 1111',
         isContactPresent: false,
         callStatus: 'missed',
-        callTime: '1 hour ago'
+        callTime: '1 hour ago',
+        callDuration: '00:00'
     ),
 
     Call(
@@ -44,7 +49,8 @@ class Call {
         phoneNumber: '080 0000 0000',
         isContactPresent: true,
         callStatus: 'outgoing',
-        callTime: '2 days ago'
+        callTime: '2 days ago',
+        callDuration: '02:24'
     ),
 
     Call(
@@ -52,7 +58,8 @@ class Call {
         phoneNumber: '080 1100 0011',
         isContactPresent: true,
         callStatus: 'missed',
-        callTime: '25th June, 2020'
+        callTime: '25th June, 2020',
+        callDuration: '00:00'
     ),
     // add others here
   ];
