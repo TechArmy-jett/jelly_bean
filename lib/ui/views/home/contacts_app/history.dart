@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class GroupsScreen extends StatelessWidget {
+class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text(
-            'groups screen'
+            'history screen'
         ),
       ),
     );
