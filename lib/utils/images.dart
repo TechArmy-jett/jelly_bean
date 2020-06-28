@@ -28,4 +28,24 @@ class AppImages {
   static String search = 'assets/images/app_icons/search.png';
   static String menu = 'assets/images/app_icons/menu.png';
 
+
+  // settings screen
+  static String aboutPhone = 'assets/images/settings/aboutphone.png';
+  static String accessibility = 'assets/images/settings/accessibility.png';
+  static String addAccount = 'assets/images/settings/addaccount.png';
+  static String apps = 'assets/images/settings/apps.png';
+  static String backupReset = 'assets/images/settings/backupreset.png';
+  static String battery = 'assets/images/settings/battery.png';
+  static String bluetooth = 'assets/images/settings/bluetooth.png';
+  static String dataUsage = 'assets/images/settings/datausage.png';
+  static String datetime = 'assets/images/settings/datetime.png';
+  static String developerOptions = 'assets/images/settings/developeroptions.png';
+  static String display = 'assets/images/settings/display.png';
+  static String languageInput = 'assets/images/settings/languageinput.png';
+  static String locationAccess = 'assets/images/settings/locationaccess.png';
+  static String security = 'assets/images/settings/security.png';
+  static String sound = 'assets/images/settings/sound.png';
+  static String storage = 'assets/images/settings/storage.png';
+
+
 }
