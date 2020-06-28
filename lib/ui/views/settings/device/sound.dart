@@ -100,21 +100,26 @@ class _SoundScreenState extends State<SoundScreen> {
                   ),
 
                   // PHONE RINGTONE
-                  ListTile(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    title: Text(
-                      'Phone ringtone',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
-                    ),
-                    subtitle: Text(
-                      'Silent',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.white,
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Phone ringtone',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Silent',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ]
                     ),
                   ),
 
@@ -147,21 +152,26 @@ class _SoundScreenState extends State<SoundScreen> {
                     color: Colors.grey,
                   ),
 
-                  ListTile(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    title: Text(
-                      'Default notification',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
-                    ),
-                    subtitle: Text(
-                      'Silent',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.white,
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Default notification',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Silent',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ]
                     ),
                   ),
 
