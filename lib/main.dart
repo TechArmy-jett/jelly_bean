@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jellybean/ui/views/home/home_screen.dart';
+import 'package:jellybean/ui/views/settings/device/display.dart';
 import 'package:jellybean/ui/views/settings/device/sound.dart';
 import 'package:jellybean/ui/views/settings/settings_screen.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SoundScreen(),
+      home: DisplayScreen(),
     );
   }
 }
