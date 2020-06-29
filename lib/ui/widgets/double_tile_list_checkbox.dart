@@ -30,7 +30,7 @@ class DoubleTileListCheckBox extends StatelessWidget {
               ),
               YBox(3),
               Text(
-                tileName,
+                subTitle,
                 style: TextStyle(
                   color: Colors.grey[400],
                   fontSize: 12,

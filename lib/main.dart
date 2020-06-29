@@ -5,6 +5,7 @@ import 'package:jellybean/ui/views/settings/device/display.dart';
 import 'package:jellybean/ui/views/settings/device/sound.dart';
 import 'package:jellybean/ui/views/settings/personal/backup_reset.dart';
 import 'package:jellybean/ui/views/settings/personal/language_input.dart';
+import 'package:jellybean/ui/views/settings/personal/location_access.dart';
 import 'package:jellybean/ui/views/settings/personal/security.dart';
 import 'package:jellybean/ui/views/settings/settings_screen.dart';
 import 'package:jellybean/ui/views/settings/system/about_phone.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SecurityScreen(),
+      home: LocationAccessScreen(),
     );
   }
 }
