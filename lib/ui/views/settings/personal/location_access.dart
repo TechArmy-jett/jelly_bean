@@ -3,6 +3,8 @@ import 'package:jellybean/ui/widgets/double_tile_list_checkbox.dart';
 import 'package:jellybean/ui/widgets/toggle_switch.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class LocationAccessScreen extends StatefulWidget {
   @override
   _LocationAccessScreenState createState() => _LocationAccessScreenState();
@@ -29,7 +31,10 @@ class _LocationAccessScreenState extends State<LocationAccessScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

@@ -25,11 +25,13 @@ class MessageScreen extends StatelessWidget {
                       width: iconSize - 15,
                     ),
                     XBox(5),
-                    Text('Messaging', style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                      fontFamily: AppStrings.robotoMedium
-                    ),)
+                    Text(
+                      'Messaging',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontFamily: AppStrings.robotoMedium),
+                    )
                   ],
                 ),
               ),
@@ -91,45 +93,51 @@ class MessageScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           Container(
-              child: Image(
-            image: AssetImage(AppImages.avatar),
-            height: 50,
-            width: 50,
-          )),
-          XBox(5),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                recipientName,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.black87,
-                  fontFamily: AppStrings.robotoMedium,
-                ),
-              ),
-              Text(
-                messageBody,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.black,
-                  fontFamily: AppStrings.robotoRegular,
-                ),
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
+            child: Image(
+              image: AssetImage(AppImages.avatar),
+              height: 50,
+              width: 50,
+            ),
           ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 5),
-            child: Text(
-              messageTime,
-              style: TextStyle(
-                fontSize: 10,
-                color: Colors.black,
-                fontFamily: AppStrings.robotoLight,
-              ),
+          XBox(5),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  recipientName,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black87,
+                    fontFamily: AppStrings.robotoMedium,
+                  ),
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        messageBody,
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.black,
+                          fontFamily: AppStrings.robotoRegular,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Text(
+                      messageTime,
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.black,
+                        fontFamily: AppStrings.robotoLight,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],

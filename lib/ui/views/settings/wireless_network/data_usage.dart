@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/nav.dart';
 import 'package:jellybean/utils/utils.dart';
 
 class DataUsageScreen extends StatelessWidget {
@@ -18,7 +19,9 @@ class DataUsageScreen extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,
@@ -56,21 +59,15 @@ class DataUsageScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   children: <Widget>[
-                    Text(
-                        'Data usage cycle :',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.white,
+                    Expanded(
+                      child: Text(
+                          'Data usage cycle: No apps have used data.',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-
-                    Text(
-                      'No apps have used data.',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.white,
-                      ),
-                    )
                   ],
                 ),
               )

@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
+import 'package:jellybean/ui/views/home/calculator/Processes.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
+import 'package:jellybean/ui/views/home/calculator/calculator_activities.dart';
 import 'package:jellybean/ui/views/home/contacts_app/add_contact_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/email_app/email_screen.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: PhoneScreen(),
+      home: MyHomePage(),
     );
   }
 }
@@ -52,7 +54,7 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    AndroidNavigator.push(app: DemoHome(), appName: "home");
+    AndroidNavigator.push(app: HomeScreen(), appName: "home");
   }
 
   void toggleMinimize() {
@@ -71,7 +73,7 @@ class MyHomePageState extends State<MyHomePage> {
         child: Container(
           padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 20),
           width: 310,
-          height: 600,
+          height: 618,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -155,7 +157,7 @@ class MyHomePageState extends State<MyHomePage> {
                                                   .containsKey(appName)) {
                                                 return SizedBox();
                                               }
-                                              String appIconPath = "";
+                                              String appIconPath = appName.toLowerCase();
                                               if (appName == "home") {
                                                 return SizedBox();
                                               }
@@ -200,7 +202,11 @@ class MyHomePageState extends State<MyHomePage> {
                             RaisedButton(
                               onPressed: () {
                                 setState(() {
-                                  AndroidNavigator.onBackPressed();
+                                  if(isMinimized){
+                                    toggleMinimize();
+                                  }else{
+                                    AndroidNavigator.onBackPressed();
+                                  }
                                 });
                               },
                               child: Text(
@@ -217,6 +223,8 @@ class MyHomePageState extends State<MyHomePage> {
                                   if (isMinimized) {
                                     toggleMinimize();
                                   } else {
+                                    act.dispose();
+                                    processor.dispose();
                                     AndroidNavigator.goHome();
                                   }
                                 });
@@ -311,10 +319,10 @@ class MinimizedChild extends StatelessWidget {
                 Positioned(
                   left: -7,
                   top: 3,
-                  child: Icon(
-                    Icons.apps,
-                    color: Colors.red,
-                    size: 30,
+                  child: Image.asset(
+                    "assets/images/app_icons/$appIconPath.png",
+                    width: 30,
+                    height: 30,
                   ),
                 ),
               ],
@@ -442,6 +450,46 @@ class AppOne extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey[300],
+                spreadRadius: 2,
+                blurRadius: 2
+              )
+            ]
+          ),
+          child: Material(
+            elevation: 4,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  SizedBox(width: 5),
+                  Icon(Icons.search),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      child: TextField(
+                        decoration: InputDecoration.collapsed(hintText: "Google"),
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.orange,
+                          width: 1.5
+                        ),
+                        borderRadius: BorderRadius.circular(5)
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                ],
+              ),
+            ),
+          ),
+        ),
         Text(
           "This is an App Demo",
           style: TextStyle(color: Colors.green, fontSize: 20),

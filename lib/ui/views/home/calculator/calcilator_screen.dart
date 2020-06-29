@@ -12,23 +12,28 @@ class CalculatorScreen extends StatefulWidget {
   _CalculatorState createState() => _CalculatorState();
 }
 
+var act = Act();
+var processor = Processor();
+
+
+
 class _CalculatorState extends State<CalculatorScreen> {
   String _output;
 
   @override
   void initState() {
-    Act.listen((event) => Processor.process(event));
-    Processor.listen((data) => setState(() {
+    act.listen((event) => processor.process(event));
+    processor.listen((data) => setState(() {
           _output = data;
         }));
-    Processor.refresh();
+    processor.refresh();
     super.initState();
   }
 
   @override
   void dispose() {
-    Act.dispose();
-    Processor.dispose();
+    act.dispose();
+    processor.dispose();
     super.dispose();
   }
 
@@ -36,21 +41,22 @@ class _CalculatorState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     Size screen = MediaQuery.of(context).size;
 
-    double buttonSize = screen.width / 4;
-//    double displayHeight = kScreenHeight;
-    double displayHeight = screen.height - (buttonSize * 5) - (buttonSize);
+    double buttonSize = 20;
+    double displayHeight = 50;
 
     return Scaffold(
       backgroundColor: Color.fromARGB(196, 32, 64, 96),
       body: Container(
-//          height: kScreenHeight,
-//          width: kScreenWidth,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Display(value: _output, height: displayHeight),
-                Pad()
-              ])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Expanded(child: Display(value: _output, height: displayHeight)),
+            SizedBox(height: 10),
+            Pad(),
+            SizedBox(height: 10)
+          ],
+        ),
+      ),
     );
   }
 }
