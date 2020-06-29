@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/models/contact/contact.dart';
 import 'package:jellybean/utils/utils.dart';
 
 class CallHistoryScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class CallHistoryScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: Text(
-                'ALL CONTACTS WITH PHONE NUMBERS',
+                'CALL HISTORY',
                 style: TextStyle(
                   fontSize: 14,
                   fontFamily: AppStrings.robotoMedium,
