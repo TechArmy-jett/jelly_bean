@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/ui/views/home/contacts_app/favourites.dart';
+import 'package:jellybean/ui/views/home/contacts_app/groups.dart';
+import 'package:jellybean/ui/views/home/contacts_app/my_contacts.dart';
 import 'package:jellybean/utils/screen_util.dart';
 import 'package:jellybean/utils/utils.dart';
 
-class ContactScreen extends StatelessWidget {
+class ContactScreen extends StatefulWidget {
+  @override
+  _ContactScreenState createState() => _ContactScreenState();
+}
+
+class _ContactScreenState extends State<ContactScreen>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 3, vsync: this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,157 +27,72 @@ class ContactScreen extends StatelessWidget {
         child: Container(
           height: kScreenHeight,
           width: kScreenWidth,
-          color: Colors.black,
-          padding: EdgeInsets.only(top: 10, bottom: 10.0, left: 10, right: 10),
+          color: Colors.white,
           child: Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Icon(
-                    Icons.call,
-                    color: Colors.white,
-                  ),
-                  Icon(
-                    Icons.access_time,
-                    color: Colors.white,
-                  ),
-                  Icon(
-                    Icons.supervisor_account,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              Divider(
-                color: Colors.white,
-              ),
-              Text('ALL CONTACTS WITH PHONE NUMBERS', style: TextStyle(
-                color: Colors.white
-              ),),        Divider(
-                color: Colors.blue,
-                thickness: 1,
+              Container(
+                height: 50,
+                color: Color.fromRGBO(37, 165, 225, 1),
+                child: TabBar(
+                  indicatorWeight: 5,
+                  indicatorColor: Colors.white,
+                  controller: _tabController,
+                  tabs: [
+                    Icon(
+                      Icons.group,
+                      color: Colors.white,
+                    ),
+                    Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.white,
+                    )
+                  ],
+                ),
               ),
               Expanded(
-                  child: ListView(
-                children: <Widget>[
-                  Text(
-                    'T',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Divider(
-                    color: Colors.blue,
-                    thickness: 1,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
+                child: TabBarView(
+                  children: [
+                    GroupsScreen(),
+                    MyContactsScreen(),
+                    FavouritesScreen(),
+                  ],
+                  controller: _tabController,
+                ),
+              ),
+              Container(
+                height: 45,
+                color: Color.fromRGBO(65, 65, 65, 0.8),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                      size: 22,
+                    ),
+                    InkWell(
+                      onTap: (){
+
+                      },
+                      child: Icon(
+                        Icons.person_add,
+                        color: Colors.white,
+                        size: 22,
                       ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Text('B'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Text('C'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Text('D'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Text('E'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Text('F'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ],
-              )),
-              YBox(20),
+                    ),
+                    Icon(
+                      Icons.more_vert,
+                      color: Colors.white,
+                      size: 22,
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
