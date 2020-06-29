@@ -93,7 +93,7 @@ class _PhoneAppScreenState extends State<PhoneAppScreen>
                       child: Icon(
                         Icons.call,
                         color: Colors.white,
-                        size: 30,
+                        size: 35,
                       ),
                     ) : tabIndex == 1 ? SizedBox.shrink() : InkWell(
                       onTap: (){},
