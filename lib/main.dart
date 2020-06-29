@@ -25,6 +25,7 @@ import 'package:jellybean/ui/views/home/browser_app/google_search.dart';
 import 'package:jellybean/ui/views/home/phone_app/phone_screen.dart';
 import 'package:jellybean/ui/views/settings/device/apps.dart';
 import 'package:jellybean/ui/views/settings/settings_screen.dart';
+import 'package:jellybean/ui/views/home/browser_app/browser_screen.dart';
 
 void main() {
   runApp(MyApp());

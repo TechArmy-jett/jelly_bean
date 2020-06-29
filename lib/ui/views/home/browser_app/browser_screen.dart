@@ -132,6 +132,7 @@ class BrowserScreen extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Text(
+
                           'Hausa',
                           style: TextStyle(color: Colors.blue),
                         )),
@@ -145,7 +146,20 @@ class BrowserScreen extends StatelessWidget {
                           'Ede Yoruba',
                           style: TextStyle(color: Colors.blue),
                         )),
-                  ],
+           'Hausa',
+                      style: TextStyle(color: Colors.blue),
+                    )),
+                    Expanded(
+                        child: Text(
+                      'Igbo',
+                      style: TextStyle(color: Colors.blue),
+                    )),
+                    Expanded(
+                        child: Text(
+                      'Ede Yoruba',
+                      style: TextStyle(color: Colors.blue),
+                    )),
+   ],
                 ),
                 YBox(130),
                 Row(
