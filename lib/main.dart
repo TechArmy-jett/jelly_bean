@@ -2,17 +2,31 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
+<<<<<<< HEAD
 import 'package:jellybean/ui/views/home/calculator/Processes.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calculator_activities.dart';
+=======
+import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
+import 'package:jellybean/ui/views/home/downloads/download_screen.dart';
+import 'package:jellybean/ui/views/home/message_app/message-settings_screen.dart';
+import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
+import 'package:jellybean/ui/views/home/clock_app/add_alarm_screen.dart';
+import 'package:jellybean/ui/views/home/clock_app/clock_screen.dart';
+>>>>>>> 02ffae70e6a4b48a4bf9dfe2b0a2ad4fab930c96
 import 'package:jellybean/ui/views/home/contacts_app/add_contact_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/email_app/email_screen.dart';
+import 'package:jellybean/ui/views/home/gallery_app/gallery_screen.dart';
 import 'package:jellybean/ui/views/home/home_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/add_message_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/message_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/message_settings_screen.dart';
+import 'package:jellybean/ui/views/home/music_app/music_screen.dart';
+import 'package:jellybean/ui/views/home/browser_app/google_search.dart';
 import 'package:jellybean/ui/views/home/phone_app/phone_screen.dart';
+import 'package:jellybean/ui/views/settings/device/apps.dart';
+import 'package:jellybean/ui/views/settings/settings_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +42,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
+<<<<<<< HEAD
       home: MyHomePage(),
+=======
+      home: DownloadScreen(),
+>>>>>>> 02ffae70e6a4b48a4bf9dfe2b0a2ad4fab930c96
     );
   }
 }

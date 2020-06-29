@@ -8,12 +8,12 @@ import 'package:jellybean/ui/views/home/phone_app/call_screen.dart';
 import 'package:jellybean/utils/screen_util.dart';
 import 'package:jellybean/utils/utils.dart';
 
-class PhoneScreen extends StatefulWidget {
+class PhoneAppScreen extends StatefulWidget {
   @override
-  _PhoneScreenState createState() => _PhoneScreenState();
+  _PhoneAppScreenState createState() => _PhoneAppScreenState();
 }
 
-class _PhoneScreenState extends State<PhoneScreen>
+class _PhoneAppScreenState extends State<PhoneAppScreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   int tabIndex = 0;
@@ -67,9 +67,9 @@ class _PhoneScreenState extends State<PhoneScreen>
               Expanded(
                 child: TabBarView(
                   children: [
-                    CallScreen(),
-                    CallHistoryScreen(),
-                    AddPhoneNumberScreen(),
+                    CallScreenPhoneApp(),
+                    CallHistoryScreenPhoneApp(),
+                    ContactListPhoneApp(),
                   ],
                   controller: _tabController,
                 ),
@@ -93,7 +93,7 @@ class _PhoneScreenState extends State<PhoneScreen>
                       child: Icon(
                         Icons.call,
                         color: Colors.white,
-                        size: 30,
+                        size: 35,
                       ),
                     ) : tabIndex == 1 ? SizedBox.shrink() : InkWell(
                       onTap: (){},

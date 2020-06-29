@@ -4,7 +4,14 @@ class MusicScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              
+            )
+          ]
+        ),
         child: Text(
             'music screen'
         ),
