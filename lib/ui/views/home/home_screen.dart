@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/main.dart';
 import 'package:jellybean/nav.dart';
 import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
+import 'package:jellybean/ui/views/home/browser_app/browser_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/gallery_app/gallery_screen.dart';
@@ -410,7 +411,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // phone
                           InkWell(
                             onTap: () {
-//                              AndroidNavigator.push(app: PhoneScreen(), appName: "Phone");
+                              AndroidNavigator.push(app: PhoneAppScreen(), appName: "Phone");
                             },
                             child: Container(
                               height: iconSize,
@@ -428,7 +429,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // contact
                           InkWell(
                             onTap: () {
-//                              AndroidNavigator.push(app: ContactScreen(), appName: "Contact");
+                              AndroidNavigator.push(app: ContactScreenContactApp(), appName: "Contact");
                             },
                             child: Container(
                               height: iconSize,
@@ -470,7 +471,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // browser
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
+                              AndroidNavigator.push(app: BrowserScreen(), appName: "Calculator");
                             },
                             child: Container(
                               height: iconSize,
