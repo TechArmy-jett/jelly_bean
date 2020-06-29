@@ -69,7 +69,7 @@ class _ContactScreenState extends State<ContactScreen>
 
               Container(
                 height: 45,
-                color: Color.fromRGBO(65, 65, 65, 1),
+                color: Color.fromRGBO(65, 65, 65, 0.8),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
