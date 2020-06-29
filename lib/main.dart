@@ -12,6 +12,7 @@ import 'package:jellybean/ui/views/settings/system/about_phone.dart';
 import 'package:jellybean/ui/views/settings/system/accessibility.dart';
 import 'package:jellybean/ui/views/settings/system/date_time.dart';
 import 'package:jellybean/ui/views/settings/system/developer_options.dart';
+import 'package:jellybean/ui/views/settings/wireless_network/more.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LocationAccessScreen(),
+      home: WirelessNetworkMoreScreen(),
     );
   }
 }
