@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
-
+import 'package:jellybean/ui/views/home/message_app/message-settings_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: MEssageSettingsScreen(),
     );
   }
 }
