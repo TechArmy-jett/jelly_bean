@@ -23,7 +23,7 @@ class AppImages {
   static String downloads = 'assets/images/app_icons/downloads.png';
   static String email = 'assets/images/app_icons/email.png';
   static String gallery = 'assets/images/app_icons/gallery.png';
-  static String message = 'assets/images/app_icons/message.png';
+  static String message = 'assets/images/app_icons/messaging.png';
   static String music = 'assets/images/app_icons/music.png';
   static String phone = 'assets/images/app_icons/phone.png';
   static String search = 'assets/images/app_icons/search.png';

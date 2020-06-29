@@ -54,7 +54,7 @@ class AppsEntryView extends StatelessWidget {
 
               GestureDetector(
                 onTap: (){
-                  AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
+//                  AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
                 },
                 child: Column(
                   children: <Widget>[
@@ -210,29 +210,34 @@ class AppsEntryView extends StatelessWidget {
                 ),
               ),
 
-              Column(
-                children: <Widget>[
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(AppImages.gallery),
+              GestureDetector(
+                onTap: (){
+                  AndroidNavigator.push(app: GalleryScreen(), appName: "Gallery");
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppImages.gallery),
+                        ),
                       ),
                     ),
-                  ),
 
-                  YBox(3),
+                    YBox(3),
 
-                  Text(
-                    'Gallery',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontFamily: AppStrings.robotoMedium,
-                    ),
-                  )
-                ],
+                    Text(
+                      'Gallery',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontFamily: AppStrings.robotoMedium,
+                      ),
+                    )
+                  ],
+                ),
               ),
 
               GestureDetector(

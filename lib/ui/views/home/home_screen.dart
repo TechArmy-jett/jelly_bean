@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:jellybean/main.dart';
 import 'package:jellybean/nav.dart';
@@ -25,6 +27,21 @@ class _HomeScreenState extends State<HomeScreen> {
   bool location = true;
   bool battery = false;
   bool data = true;
+
+  @override
+  void initState() {
+    super.initState();
+    if(mounted){
+      Timer.periodic(Duration(seconds: 1), (timer) {
+        setState(() {
+          time = DateTime.now();
+        });
+      });
+    }
+  }
+
+  DateTime time = DateTime.now();
+
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       YBox(40),
 
                       Text(
-                        '09 : 23 PM',
+                        "${time.hour} : ${time.minute}",
                         style: TextStyle(
                           fontSize: 30,
                           color: Colors.white,
@@ -471,7 +488,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // browser
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: BrowserScreen(), appName: "Calculator");
+                              AndroidNavigator.push(app: BrowserScreen(), appName: "Browser");
                             },
                             child: Container(
                               height: iconSize,
