@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jellybean/ui/widgets/setting_tile.dart';
+import 'package:jellybean/ui/widgets/toggle_switch.dart';
 import 'package:jellybean/utils/images.dart';
 import 'package:jellybean/utils/utils.dart';
 
@@ -75,10 +76,16 @@ class SettingsScreen extends StatelessWidget {
                         ),
 
                         // bluetooth
-                        SettingsTile(
-                          tileName: 'Bluetooth',
-                          imgPath: AppImages.bluetooth,
-                          onTap: () {},
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            SettingsTile(
+                              tileName: 'Bluetooth',
+                              imgPath: AppImages.bluetooth,
+                              onTap: () {},
+                            ),
+                            ToggleSwitch(),
+                          ],
                         ),
 
                         Padding(
@@ -403,7 +410,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
               ),
 
-             
+
             ],
           ),
         ),

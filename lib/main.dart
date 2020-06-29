@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
+import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/clock_app/add_alarm_screen.dart';
 import 'package:jellybean/ui/views/home/clock_app/clock_screen.dart';
@@ -16,6 +17,7 @@ import 'package:jellybean/ui/views/home/message_app/message_settings_screen.dart
 import 'package:jellybean/ui/views/home/music_app/music_screen.dart';
 import 'package:jellybean/ui/views/home/phone_app/phone_screen.dart';
 import 'package:jellybean/ui/views/settings/device/apps.dart';
+import 'package:jellybean/ui/views/settings/settings_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: AddAlarmScreen(),
+      home: SettingsScreen(),
     );
   }
 }
