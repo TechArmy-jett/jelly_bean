@@ -485,10 +485,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 onTap: () {
                   goto(16);
 
-<<<<<<< HEAD
                 },
               ),
-=======
               Divider(
                 height: 5,
                 color: Colors.blue,
@@ -857,9 +855,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
               ),
 
-
->>>>>>> 02ffae70e6a4b48a4bf9dfe2b0a2ad4fab930c96
-            ],
+    ],
           ),
         ),
       ],

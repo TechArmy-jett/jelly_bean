@@ -410,7 +410,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // phone
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: PhoneScreen(), appName: "Phone");
+//                              AndroidNavigator.push(app: PhoneScreen(), appName: "Phone");
                             },
                             child: Container(
                               height: iconSize,
@@ -428,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // contact
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: ContactScreen(), appName: "Contact");
+//                              AndroidNavigator.push(app: ContactScreen(), appName: "Contact");
                             },
                             child: Container(
                               height: iconSize,
