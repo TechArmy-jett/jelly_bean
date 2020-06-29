@@ -3,6 +3,8 @@ import 'package:jellybean/ui/widgets/list_checkbox.dart';
 import 'package:jellybean/utils/screen_util.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class DisplayScreen extends StatefulWidget {
   @override
   _DisplayScreenState createState() => _DisplayScreenState();
@@ -28,7 +30,10 @@ class _DisplayScreenState extends State<DisplayScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

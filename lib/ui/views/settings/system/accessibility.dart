@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/ui/widgets/list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class AccessibilityScreen extends StatefulWidget {
 
   @override
@@ -33,7 +35,10 @@ class _AccessibilityScreenState extends State<AccessibilityScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

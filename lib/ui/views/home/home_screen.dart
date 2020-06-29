@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/main.dart';
+import 'package:jellybean/nav.dart';
+import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
+import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
+import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
+import 'package:jellybean/ui/views/home/gallery_app/gallery_screen.dart';
+import 'package:jellybean/ui/views/home/message_app/message_screen.dart';
+import 'package:jellybean/ui/views/home/music_app/music_screen.dart';
+import 'package:jellybean/ui/views/home/phone_app/phone_screen.dart';
+import 'package:jellybean/ui/views/settings/settings_screen.dart';
 import 'package:jellybean/utils/screen_util.dart';
 import 'package:jellybean/utils/utils.dart';
 
@@ -269,7 +279,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       // camera
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          AndroidNavigator.push(app: MessageScreen(), appName: "Messaging");
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
@@ -296,7 +308,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                             // music
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                AndroidNavigator.push(app: MusicScreen(), appName: "Music");
+                              },
                               child: Column(
                                 children: <Widget>[
                                   Container(
@@ -321,7 +335,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                             // gallery
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                AndroidNavigator.push(app: GalleryScreen(), appName: "Gallery");
+                              },
                               child: Column(
                                 children: <Widget>[
                                   Container(
@@ -346,7 +362,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                             // settings
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                AndroidNavigator.push(app: SettingsScreen(), appName: "Settings");
+                              },
                               child: Column(
                                 children: <Widget>[
                                   Container(
@@ -391,7 +409,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: <Widget>[
                           // phone
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+//                              AndroidNavigator.push(app: PhoneScreen(), appName: "Phone");
+                            },
                             child: Container(
                               height: iconSize,
                               width: iconSize,
@@ -407,7 +427,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           // contact
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+//                              AndroidNavigator.push(app: ContactScreen(), appName: "Contact");
+                            },
                             child: Container(
                               height: iconSize,
                               width: iconSize,
@@ -424,6 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // menu item
                           InkWell(
                             onTap: () {
+                              AndroidNavigator.push(app: AllAppsScreen(), appName: "AllApps");
                               print('menu item');
                             },
                             child: Container(
@@ -446,7 +469,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           // browser
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
+                            },
                             child: Container(
                               height: iconSize,
                               width: iconSize,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/ui/views/home/calculator/calculator_values.dart';
 import 'package:jellybean/ui/views/home/calculator/calculator_activities.dart';
 
+import 'calcilator_screen.dart';
+
 abstract class Values {
   static CalculatorValues clear = const CalculatorValues('C');
   static CalculatorValues sign = const CalculatorValues('±');
@@ -44,7 +46,7 @@ class CalculatorButton extends StatelessWidget {
     }
   }
 
-  static dynamic _fire(CalculatorButton key) => Act.fire(Activities(key));
+  static dynamic _fire(CalculatorButton key) => act.fire(Activities(key));
 
   @override
   Widget build(BuildContext context) {
@@ -53,15 +55,15 @@ class CalculatorButton extends StatelessWidget {
         Theme.of(context).textTheme.headline4.copyWith(color: Colors.white);
 
     return Container(
-        width: (operation == Values.zero) ? (size * 2) : size,
-        padding: EdgeInsets.all(2),
-        height: size,
-        child: RaisedButton(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-          color: color,
-          elevation: 4,
-          child: Text(operation.value, style: style),
-          onPressed: () => _fire(this),
-        ));
+      width: 50,
+      padding: EdgeInsets.all(2),
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+        color: color,
+        elevation: 4,
+        child: Text(operation.value, style: style),
+        onPressed: () => _fire(this),
+      ),
+    );
   }
 }

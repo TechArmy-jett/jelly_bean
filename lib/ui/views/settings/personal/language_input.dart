@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/ui/widgets/double_tile_list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class LanguageInputScreen extends StatefulWidget {
 
   @override
@@ -31,7 +33,10 @@ class _LanguageInputScreenState extends State<LanguageInputScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

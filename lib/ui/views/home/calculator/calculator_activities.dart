@@ -7,15 +7,17 @@ class Activities {
   final CalculatorButton key;
 }
 
-abstract class Act {
-  static StreamController _controller = StreamController();
+class Act {
+   StreamController _controller = StreamController();
 
-  static Stream get _stream => _controller.stream;
+   Stream get _stream => _controller.stream;
 
-  static StreamSubscription listen(Function handler) =>
+   StreamSubscription listen(Function handler) =>
       _stream.listen(handler as dynamic);
 
-  static void fire(Activities event) => _controller.add(event);
+   void fire(Activities event) => _controller.add(event);
 
-  static dispose() => _controller.close();
+   bool hasListener() => _controller.hasListener;
+
+   dispose() => _controller.close();
 }

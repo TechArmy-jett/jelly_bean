@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class BackupResetScreen extends StatelessWidget {
 
   @override
@@ -20,7 +22,10 @@ class BackupResetScreen extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      AndroidNavigator.onBackPressed();
+
+                    },
                     child: Icon(
                       Icons.arrow_back_ios,
                       size: 12,

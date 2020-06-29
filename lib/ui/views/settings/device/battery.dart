@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/nav.dart';
 import 'package:jellybean/utils/utils.dart';
 
 class BatteryScreen extends StatelessWidget {
@@ -19,7 +20,9 @@ class BatteryScreen extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

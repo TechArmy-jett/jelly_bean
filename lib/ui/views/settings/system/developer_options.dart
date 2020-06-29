@@ -3,6 +3,8 @@ import 'package:jellybean/models/contact/contact.dart';
 import 'package:jellybean/ui/widgets/double_tile_list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class DeveloperOptionsScreen extends StatefulWidget {
   @override
   _DeveloperOptionsScreenState createState() => _DeveloperOptionsScreenState();
@@ -36,7 +38,10 @@ class _DeveloperOptionsScreenState extends State<DeveloperOptionsScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

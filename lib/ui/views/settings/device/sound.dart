@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jellybean/nav.dart';
 import 'package:jellybean/ui/widgets/list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
@@ -32,7 +33,9 @@ class _SoundScreenState extends State<SoundScreen> {
               child: Row(
                 children: <Widget>[
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      AndroidNavigator.onBackPressed();
+                    },
                     child: Icon(
                       Icons.arrow_back_ios,
                       size: 12,

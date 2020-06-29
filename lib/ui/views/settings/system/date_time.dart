@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/ui/widgets/double_tile_list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class DateTimeScreen extends StatefulWidget {
   @override
   _DateTimeScreenState createState() => _DateTimeScreenState();
@@ -30,7 +32,10 @@ class _DateTimeScreenState extends State<DateTimeScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

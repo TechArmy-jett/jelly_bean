@@ -3,6 +3,8 @@ import 'package:jellybean/ui/widgets/double_tile_list_checkbox.dart';
 import 'package:jellybean/ui/widgets/list_checkbox.dart';
 import 'package:jellybean/utils/utils.dart';
 
+import '../../../../nav.dart';
+
 class SecurityScreen extends StatefulWidget {
   @override
   _SecurityScreenState createState() => _SecurityScreenState();
@@ -28,7 +30,10 @@ class _SecurityScreenState extends State<SecurityScreen> {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        AndroidNavigator.onBackPressed();
+
+                      },
                       child: Icon(
                         Icons.arrow_back_ios,
                         size: 12,

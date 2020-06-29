@@ -6,7 +6,7 @@ final double kScreenHeight = 490;
 // default width of screen
 final double kScreenWidth = 310;
 // icon size
-final double iconSize = 50;
+final double iconSize = 45;
 // nav 
 class ScreenUtil {
   final BuildContext context;
