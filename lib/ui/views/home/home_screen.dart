@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:jellybean/main.dart';
 import 'package:jellybean/nav.dart';
 import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
+import 'package:jellybean/ui/views/home/browser_app/browser_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/gallery_app/gallery_screen.dart';
@@ -24,6 +27,21 @@ class _HomeScreenState extends State<HomeScreen> {
   bool location = true;
   bool battery = false;
   bool data = true;
+
+  @override
+  void initState() {
+    super.initState();
+    if(mounted){
+      Timer.periodic(Duration(seconds: 1), (timer) {
+        setState(() {
+          time = DateTime.now();
+        });
+      });
+    }
+  }
+
+  DateTime time = DateTime.now();
+
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       YBox(40),
 
                       Text(
-                        '09 : 23 PM',
+                        "${time.hour} : ${time.minute}",
                         style: TextStyle(
                           fontSize: 30,
                           color: Colors.white,
@@ -410,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // phone
                           InkWell(
                             onTap: () {
-//                              AndroidNavigator.push(app: PhoneScreen(), appName: "Phone");
+                              AndroidNavigator.push(app: PhoneAppScreen(), appName: "Phone");
                             },
                             child: Container(
                               height: iconSize,
@@ -428,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // contact
                           InkWell(
                             onTap: () {
-//                              AndroidNavigator.push(app: ContactScreen(), appName: "Contact");
+                              AndroidNavigator.push(app: ContactScreenContactApp(), appName: "Contact");
                             },
                             child: Container(
                               height: iconSize,
@@ -470,7 +488,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // browser
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
+                              AndroidNavigator.push(app: BrowserScreen(), appName: "Browser");
                             },
                             child: Container(
                               height: iconSize,

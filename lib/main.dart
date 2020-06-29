@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -66,8 +67,17 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+    if(mounted){
+      Timer.periodic(Duration(seconds: 1), (timer) {
+        setState(() {
+          time = DateTime.now();
+        });
+      });
+    }
     AndroidNavigator.push(app: HomeScreen(), appName: "home");
   }
+
+  DateTime time = DateTime.now();
 
   void toggleMinimize() {
     setState(() {
@@ -76,6 +86,8 @@ class MyHomePageState extends State<MyHomePage> {
   }
 
   bool isMinimized = false;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +124,20 @@ class MyHomePageState extends State<MyHomePage> {
                           color: Color(0xff191D20),
                         ),
                         child: Row(
-                          children: [],
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Icon(Icons.wifi, color: Colors.white, size: 15,),
+                            SizedBox(width: 5),
+                            Icon(Icons.battery_charging_full, color: Colors.white, size: 15,),
+                            SizedBox(width: 5),
+                            Text(
+                              "${time.hour}:${time.minute}:${time.second}",
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                          ],
                         ),
                       ),
                       Expanded(
@@ -146,10 +171,8 @@ class MyHomePageState extends State<MyHomePage> {
                                           (AndroidNavigator.backStack.length ==
                                                   2 &&
                                               AndroidNavigator.currentIndex ==
-                                                  1) ||
-                                          (AndroidNavigator.backStack.length ==
-                                                  2 &&
-                                              AndroidNavigator.backStack.map((e) => e.containsKey("AllApps")).toList().isNotEmpty)
+                                                  1)
+
                                       ? Center(
                                           child: Text(
                                             "No Recent Apps",
@@ -214,9 +237,10 @@ class MyHomePageState extends State<MyHomePage> {
                           color: Color(0xff191D20),
                         ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            RaisedButton(
+                            IconButton(
+                              icon: Icon(Icons.keyboard_backspace),
                               onPressed: () {
                                 setState(() {
                                   if (isMinimized) {
@@ -226,15 +250,10 @@ class MyHomePageState extends State<MyHomePage> {
                                   }
                                 });
                               },
-                              child: Text(
-                                "Back",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10),
-                              ),
-                              color: Colors.pink,
+                              color: Colors.white,
                             ),
                             SizedBox(width: 10),
-                            RaisedButton(
+                            IconButton(
                               onPressed: () {
                                 setState(() {
                                   if (isMinimized) {
@@ -246,24 +265,16 @@ class MyHomePageState extends State<MyHomePage> {
                                   }
                                 });
                               },
-                              child: Text(
-                                "Home",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10),
-                              ),
-                              color: Colors.pink,
+                             icon: Icon(Icons.home),
+                              color: Colors.white,
                             ),
                             SizedBox(width: 10),
-                            RaisedButton(
+                            IconButton(
                               onPressed: () {
                                 toggleMinimize();
                               },
-                              child: Text(
-                                "Minimize",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10),
-                              ),
-                              color: Colors.pink,
+                              icon: Icon(Icons.view_carousel),
+                              color: Colors.white,
                             ),
                           ],
                         ),
