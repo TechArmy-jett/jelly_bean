@@ -10,7 +10,7 @@ import 'package:jellybean/ui/views/home/email_app/email_screen.dart';
 import 'package:jellybean/ui/views/home/home_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/add_message_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/message_screen.dart';
-import 'package:jellybean/ui/views/home/browser_app/google_search.dart';
+import 'package:jellybean/ui/views/home/browser_app/browser_screen.dart';
 import 'package:jellybean/ui/views/home/phone_app/phone_screen.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: GoogleSearch(),
+      home: BrowserScreen(),
     );
   }
 }
