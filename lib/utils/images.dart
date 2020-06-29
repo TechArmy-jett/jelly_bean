@@ -7,7 +7,7 @@ class AppImages {
   static String noAvatar = 'assets/images/';
 
   // avatars
-  static String avatar1 = 'assets/images/';
+  static String avatar = 'assets/images/avatar.png';
 
 
   // app icons
