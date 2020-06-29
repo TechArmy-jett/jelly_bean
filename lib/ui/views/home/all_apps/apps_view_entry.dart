@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
+import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/clock_app/clock_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/downloads/download_screen.dart';
@@ -45,29 +46,34 @@ class AppsEntryView extends StatelessWidget {
                 ],
               ),
 
-              Column(
-                children: <Widget>[
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(AppImages.calculator),
+              GestureDetector(
+                onTap: (){
+                  AndroidNavigator.push(app: CalculatorScreen(), appName: "Calculator");
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppImages.calculator),
+                        ),
                       ),
                     ),
-                  ),
 
-                  YBox(3),
+                    YBox(3),
 
-                  Text(
-                    'Calculator',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontFamily: AppStrings.robotoMedium,
-                    ),
-                  )
-                ],
+                    Text(
+                      'Calculator',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontFamily: AppStrings.robotoMedium,
+                      ),
+                    )
+                  ],
+                ),
               ),
 
               GestureDetector(
@@ -140,7 +146,7 @@ class AppsEntryView extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: (){
-                  AndroidNavigator.push(app: GalleryScreen(), appName: "Clock");
+                  AndroidNavigator.push(app: GalleryScreen(), appName: "Gallery");
                 },
                 child: Column(
                   children: <Widget>[
