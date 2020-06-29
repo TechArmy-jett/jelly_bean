@@ -13,42 +13,63 @@ class EmailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.email,
-                    color: Colors.black,
-                  ),
-                  XBox(5),
-                  Text('Account setup')
-                ],
+              Container(
+                height: 40,
+                color: Color.fromRGBO(213, 213, 213, 1),
+                child: Row(
+                  children: <Widget>[
+                    Image(
+                      image: AssetImage(AppImages.email),
+                      height: iconSize - 15,
+                      width: iconSize - 15,
+                    ),
+                    XBox(5),
+                    Text(
+                      'Account setup',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontFamily: AppStrings.robotoMedium),
+                    )
+                  ],
+                ),
               ),
               YBox(15),
               Column(
                 children: <Widget>[
-                  Text('You can set up email for most accounts in just a few steps'),
+                  Text(
+                      'You can set up email for most accounts in just a few steps'),
                   TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'Email address'
-                    ),
+                    decoration: InputDecoration(hintText: 'Email address'),
                   ),
-
                   TextFormField(
                     decoration: InputDecoration(
-                        hintText: 'Password',
+                      hintText: 'Password',
                     ),
                   )
                 ],
               ),
-              YBox(5),
+              YBox(20),
               Row(
                 children: <Widget>[
                   Expanded(
-                    child: RaisedButton(onPressed: (){},child: Text('Manual setup'), ),
+                    child: SizedBox(
+                      height: 25,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        child: Text('Manual setup'),
+                      ),
+                    ),
                   ),
-                  XBox(5),
+                  XBox(10),
                   Expanded(
-                    child: RaisedButton(onPressed: (){},child: Text('Next'), ),
+                    child: SizedBox(
+                      height: 25,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        child: Text('Next'),
+                      ),
+                    ),
                   )
                 ],
               )

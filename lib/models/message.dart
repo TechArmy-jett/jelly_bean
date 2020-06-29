@@ -33,19 +33,100 @@ class Message {
     Message(
       recipientName: Contact.contactList[0].name,
       recipientNumber: Contact.contactList[0].phone.phoneNumber,
-      messageBody: 'This is the message body',
+      messageBody: 'This is the message body, let\'s see...',
+      messageTime: '5:48AM',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[1].name,
+      recipientNumber: Contact.contactList[1].phone.phoneNumber,
+      messageBody: 'Hey Jo, can you please call me? ',
       messageTime: '1:48AM',
       hasAvatar: true,
       isContactPresent: true,
     ),
 
     Message(
-      recipientName: '',
-      recipientNumber: '020 0000 1110',
-      messageBody: 'Message body goes here',
-      messageTime: '3:48AM',
-      hasAvatar: false,
-      isContactPresent: false,
+      recipientName: Contact.contactList[2].name,
+      recipientNumber: Contact.contactList[2].phone.phoneNumber,
+      messageBody: 'I told you, let\'s meet up tomorrow..',
+      messageTime: 'yesterday',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[3].name,
+      recipientNumber: Contact.contactList[3].phone.phoneNumber,
+      messageBody: 'Yay, Birthday in a few days',
+      messageTime: 'yesterday',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[4].name,
+      recipientNumber: Contact.contactList[4].phone.phoneNumber,
+      messageBody: 'OMG, they gonna kill me, send cops',
+      messageTime: 'yesterday',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[5].name,
+      recipientNumber: Contact.contactList[5].phone.phoneNumber,
+      messageBody: 'Thanks for stopping by Jo.',
+      messageTime: 'june 27',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[0].name,
+      recipientNumber: Contact.contactList[0].phone.phoneNumber,
+      messageBody: 'Down for a BLM protest?',
+      messageTime: 'june 27',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[6].name,
+      recipientNumber: Contact.contactList[6].phone.phoneNumber,
+      messageBody: 'Sent, check your Email.',
+      messageTime: 'june 27',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[7].name,
+      recipientNumber: Contact.contactList[7].phone.phoneNumber,
+      messageBody: 'Down for a BLM protest?',
+      messageTime: 'june 26',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[8].name,
+      recipientNumber: Contact.contactList[8].phone.phoneNumber,
+      messageBody: 'Down for a BLM protest?',
+      messageTime: 'june 26',
+      hasAvatar: true,
+      isContactPresent: true,
+    ),
+
+    Message(
+      recipientName: Contact.contactList[9].name,
+      recipientNumber: Contact.contactList[9].phone.phoneNumber,
+      messageBody: 'Yoo buddy, How is your health?',
+      messageTime: 'june 25',
+      hasAvatar: true,
+      isContactPresent: true,
     ),
 
   ];

@@ -70,7 +70,7 @@ class _MEssageSettingsScreen extends State<MEssageSettingsScreen> {
                                   'Delete old messages as limits  \nas reached'),
                             ],
                           ),
-                          Checkbox(value: false, onChanged: _value1Changed)
+                          Checkbox(value: _value1, onChanged: _value1Changed)
                         ],
                       ),
                       Divider(
@@ -99,7 +99,7 @@ class _MEssageSettingsScreen extends State<MEssageSettingsScreen> {
                               Text('50 messages per conversation'),
                             ],
                           ),
-                          Checkbox(value: false, onChanged: _value1Changed)
+                          Checkbox(value: _value1, onChanged: _value1Changed)
                         ],
                       ),
                       Text('TEXT (SMS) MESSAGES'),
@@ -117,7 +117,7 @@ class _MEssageSettingsScreen extends State<MEssageSettingsScreen> {
                                   'Request a delivery report for each\n message you send'),
                             ],
                           ),
-                          Checkbox(value: false, onChanged: _value1Changed)
+                          Checkbox(value: _value1, onChanged: _value1Changed)
                         ],
                       ),
                       Divider(
@@ -154,7 +154,7 @@ class _MEssageSettingsScreen extends State<MEssageSettingsScreen> {
                                   'Request a delivery report for each \nmessage you send'),
                             ],
                           ),
-                          Checkbox(value: false, onChanged: _value1Changed)
+                          Checkbox(value: _value1, onChanged: _value1Changed)
                         ],
                       ),
                       Divider(
@@ -170,7 +170,7 @@ class _MEssageSettingsScreen extends State<MEssageSettingsScreen> {
                                   'Request a read report for each \nmessage you send'),
                             ],
                           ),
-                          Checkbox(value: false, onChanged: _value1Changed)
+                          Checkbox(value: _value1, onChanged: _value1Changed)
                         ],
                       )
                     ],

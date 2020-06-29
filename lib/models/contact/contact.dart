@@ -38,9 +38,164 @@ class Contact {
         emailAddress: 'kunle.akao@email.com',
         emailType: 'HOME'
       ),
-      avatarPath: AppImages.avatar1,
+      avatarPath: AppImages.avatar,
     ),
 
+    Contact(
+      name: 'Adediran Goodness',
+      phone: Phone(
+          phoneNumber: '080 1212 4433',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+
+    Contact(
+      name: 'Joseph Philips',
+      phone: Phone(
+          phoneNumber: '080 1332 0101',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+    Contact(
+      name: 'Philips Jomiloju',
+      phone: Phone(
+          phoneNumber: '080 0101 00001',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+    Contact(
+      name: 'Jegede Timilehin',
+      phone: Phone(
+          phoneNumber: '080 4566 1111',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+    Contact(
+      name: 'Adekanbi Josteve',
+      phone: Phone(
+          phoneNumber: '080 2345 6789',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+
+    Contact(
+      name: 'Anjola Racheal',
+      phone: Phone(
+          phoneNumber: '080 3333 3333',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+
+    Contact(
+      name: 'Mary Jacobs',
+      phone: Phone(
+          phoneNumber: '080 1099 3333',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+    Contact(
+      name: 'Toluwanimi Emmanuel',
+      phone: Phone(
+          phoneNumber: '080 9393 0101',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
+
+    Contact(
+      name: 'Akano Mary',
+      phone: Phone(
+          phoneNumber: '080 2222 4444',
+          phoneType: 'MOBILE'
+      ),
+      address:  Address(
+        addressName: '2, Ontario, Canada',
+        addressType: 'HOME',
+      ),
+      email: Email(
+          emailAddress: 'kunle.akao@email.com',
+          emailType: 'HOME'
+      ),
+      avatarPath: AppImages.avatar,
+    ),
     // add other entry here
   ];
 }
