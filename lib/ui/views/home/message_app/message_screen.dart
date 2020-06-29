@@ -25,13 +25,11 @@ class MessageScreen extends StatelessWidget {
                       width: iconSize - 15,
                     ),
                     XBox(5),
-                    Text(
-                      'Messaging',
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontFamily: AppStrings.robotoMedium),
-                    )
+                    Text('Messaging', style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontFamily: AppStrings.robotoMedium
+                    ),)
                   ],
                 ),
               ),
@@ -40,8 +38,8 @@ class MessageScreen extends StatelessWidget {
                   padding: EdgeInsets.zero,
                   itemBuilder: (_, index) {
                     return _buildMessageTile(
-                        index % 2 == 0
-                            ? Message.messageList[index].recipientName
+                        index % 4 == 0
+                            ? Message.messageList[index].recipientNumber
                             : Message.messageList[index].recipientName,
                         Message.messageList[index].messageBody,
                         Message.messageList[index].messageTime);
