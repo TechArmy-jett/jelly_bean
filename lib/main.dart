@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
+import 'package:jellybean/ui/views/home/contacts_app/add_contact_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
 import 'package:jellybean/ui/views/home/email_app/email_screen.dart';
 import 'package:jellybean/ui/views/home/home_screen.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: ContactScreen(),
+      home: AddContactScreen(),
     );
   }
 }
