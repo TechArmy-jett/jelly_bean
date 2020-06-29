@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CallScreen extends StatelessWidget {
+class CallScreenPhoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

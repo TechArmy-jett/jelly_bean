@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jellybean/models/contact/contact.dart';
 import 'package:jellybean/utils/utils.dart';
 
-class AddPhoneNumberScreen extends StatelessWidget {
+class ContactListPhoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

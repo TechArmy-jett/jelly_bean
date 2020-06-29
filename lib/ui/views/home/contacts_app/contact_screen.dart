@@ -5,12 +5,12 @@ import 'package:jellybean/ui/views/home/contacts_app/my_contacts.dart';
 import 'package:jellybean/utils/screen_util.dart';
 import 'package:jellybean/utils/utils.dart';
 
-class ContactScreen extends StatefulWidget {
+class ContactScreenContactApp extends StatefulWidget {
   @override
-  _ContactScreenState createState() => _ContactScreenState();
+  _ContactScreenContactAppState createState() => _ContactScreenContactAppState();
 }
 
-class _ContactScreenState extends State<ContactScreen>
+class _ContactScreenContactAppState extends State<ContactScreenContactApp>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
 
@@ -57,7 +57,7 @@ class _ContactScreenState extends State<ContactScreen>
                 child: TabBarView(
                   children: [
                     GroupsScreen(),
-                    MyContactsScreen(),
+                    ContactListContactApp(),
                     FavouritesScreen(),
                   ],
                   controller: _tabController,
