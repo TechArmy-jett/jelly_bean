@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
 import 'package:jellybean/ui/views/home/all_apps/all_apps_screen.dart';
+import 'package:jellybean/ui/views/home/downloads/download_screen.dart';
 import 'package:jellybean/ui/views/home/message_app/message-settings_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/clock_app/add_alarm_screen.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: AllAppsScreen(),
+      home: DownloadScreen(),
     );
   }
 }
