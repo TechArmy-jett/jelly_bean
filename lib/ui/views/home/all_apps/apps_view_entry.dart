@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jellybean/nav.dart';
+import 'package:jellybean/ui/views/home/browser_app/browser_screen.dart';
 import 'package:jellybean/ui/views/home/calculator/calcilator_screen.dart';
 import 'package:jellybean/ui/views/home/clock_app/clock_screen.dart';
 import 'package:jellybean/ui/views/home/contacts_app/contact_screen.dart';
@@ -21,29 +22,34 @@ class AppsEntryView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(AppImages.browser),
+              GestureDetector(
+                onTap: (){
+                  AndroidNavigator.push(app: BrowserScreen(), appName: "Browser");
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppImages.browser),
+                        ),
                       ),
                     ),
-                  ),
 
-                  YBox(3),
+                    YBox(3),
 
-                  Text(
-                    'Browser',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontFamily: AppStrings.robotoMedium,
-                    ),
-                  )
-                ],
+                    Text(
+                      'Browser',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontFamily: AppStrings.robotoMedium,
+                      ),
+                    )
+                  ],
+                ),
               ),
 
               GestureDetector(
