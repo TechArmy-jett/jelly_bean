@@ -56,17 +56,13 @@ class _ContactScreenState extends State<ContactScreen>
               Expanded(
                 child: TabBarView(
                   children: [
-
                     GroupsScreen(),
-
                     MyContactsScreen(),
-
                     FavouritesScreen(),
                   ],
                   controller: _tabController,
                 ),
               ),
-
               Container(
                 height: 45,
                 color: Color.fromRGBO(65, 65, 65, 0.8),
@@ -74,9 +70,26 @@ class _ContactScreenState extends State<ContactScreen>
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Icon(Icons.search, color: Colors.white, size: 22,),
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                      size: 22,
+                    ),
+                    InkWell(
+                      onTap: (){
 
-                    Icon(Icons.more_vert, color: Colors.white, size: 22,)
+                      },
+                      child: Icon(
+                        Icons.person_add,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                    ),
+                    Icon(
+                      Icons.more_vert,
+                      color: Colors.white,
+                      size: 22,
+                    )
                   ],
                 ),
               ),
