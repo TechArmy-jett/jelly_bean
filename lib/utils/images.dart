@@ -9,6 +9,7 @@ class AppImages {
   // avatars
   static String avatar = 'assets/images/avatar.png';
 
+  static String wallpaper = 'assets/images/wallpaper.png';
 
   // app icons
   static String android = 'assets/images/app_icons/android.png';
