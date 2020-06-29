@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ContactsScreen extends StatelessWidget {
+class CallScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Container(
+      color: Color.fromRGBO(8, 19, 23, 1),
+      child: Center(
         child: Text(
             'contacts screen'
         ),
