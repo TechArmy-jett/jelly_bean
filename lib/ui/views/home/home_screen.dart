@@ -446,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // menu item
                           InkWell(
                             onTap: () {
-                              AndroidNavigator.push(app: AllAppsScreen(), appName: "Contact");
+                              AndroidNavigator.push(app: AllAppsScreen(), appName: "AllApps");
                               print('menu item');
                             },
                             child: Container(

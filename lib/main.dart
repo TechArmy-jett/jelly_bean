@@ -145,7 +145,10 @@ class MyHomePageState extends State<MyHomePage> {
                                           (AndroidNavigator.backStack.length ==
                                                   2 &&
                                               AndroidNavigator.currentIndex ==
-                                                  1)
+                                                  1) ||
+                                          (AndroidNavigator.backStack.length ==
+                                                  2 &&
+                                              AndroidNavigator.backStack.map((e) => e.containsKey("AllApps")).toList().isNotEmpty)
                                       ? Center(
                                           child: Text(
                                             "No Recent Apps",
@@ -168,8 +171,10 @@ class MyHomePageState extends State<MyHomePage> {
                                                   .containsKey(appName)) {
                                                 return SizedBox();
                                               }
-                                              String appIconPath = appName.toLowerCase();
-                                              if (appName == "home") {
+                                              String appIconPath =
+                                                  appName.toLowerCase();
+                                              if (appName == "home" ||
+                                                  appName == "AllApps") {
                                                 return SizedBox();
                                               }
                                               return Dismissible(
@@ -213,9 +218,9 @@ class MyHomePageState extends State<MyHomePage> {
                             RaisedButton(
                               onPressed: () {
                                 setState(() {
-                                  if(isMinimized){
+                                  if (isMinimized) {
                                     toggleMinimize();
-                                  }else{
+                                  } else {
                                     AndroidNavigator.onBackPressed();
                                   }
                                 });
@@ -391,13 +396,13 @@ class _AppThreeState extends State<AppThree> {
   @override
   void initState() {
     super.initState();
-    AndroidNavigator.onBackPressed = (){
-      if(index == 1){
+    AndroidNavigator.onBackPressed = () {
+      if (index == 1) {
         setState(() {
           index = 0;
           print(index);
         });
-      }else{
+      } else {
         AndroidNavigator.goHome();
       }
     };
@@ -462,15 +467,9 @@ class AppOne extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey[300],
-                spreadRadius: 2,
-                blurRadius: 2
-              )
-            ]
-          ),
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(color: Colors.grey[300], spreadRadius: 2, blurRadius: 2)
+          ]),
           child: Material(
             elevation: 4,
             child: Padding(
@@ -482,17 +481,15 @@ class AppOne extends StatelessWidget {
                   SizedBox(width: 5),
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                       child: TextField(
-                        decoration: InputDecoration.collapsed(hintText: "Google"),
+                        decoration:
+                            InputDecoration.collapsed(hintText: "Google"),
                       ),
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.orange,
-                          width: 1.5
-                        ),
-                        borderRadius: BorderRadius.circular(5)
-                      ),
+                          border: Border.all(color: Colors.orange, width: 1.5),
+                          borderRadius: BorderRadius.circular(5)),
                     ),
                   ),
                   SizedBox(width: 5),
